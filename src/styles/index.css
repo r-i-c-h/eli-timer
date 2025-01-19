@@ -1,53 +1,79 @@
-/* ~~~~~ Mini CSS-Reset+Defaults ~~~~~~ */
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0 auto;
-  font-family: inherit;
-  box-sizing: border-box;
-}
+  *,
+  *::before,
+  *::after {
+    padding: 0;
+    margin: 0 auto;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
 
-:root {
-  /* --sans-serifs: font-family: system-ui, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif; */
-  /* --serifs: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; */
-  /* --monos: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; */
+  :root {
+    /* --sans-serifs: font-family: system-ui, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif; */
+    /* --serifs: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; */
+    /* --monos: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; */
+  }
 
-}
+  body {
+    display: grid;
+    place-content: center center;
+    /* justify-content: center;
+  align-items: center; */
+    height: 100vh;
+    margin: 0;
+    font-family: system-ui;
+    background-color: #dddddd;
+  }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
+  .title {
+    font-size: 2rem;
+  }
 
-body {
-  background: #ddd;
-  color: #111;
-  font-family: system-ui;
-  line-height: 1.5;
-  font-size: 1.125rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
+  .timer-container {
+    position: relative;
+    background-color: black;
+    border-radius: 100%;
+    margin: 2rem;
+    width: 50vmin;
+    max-width: 500px;
+    height: 50vmin;
+    max-height: 500px;
+  }
 
-main,
-.container,
-.wrapper {
-  width: min(70ch, 100% - 4rem);
-  margin-inline: auto;
-}
+  .circle {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    fill: none;
+    stroke: #4caf50;
+    stroke-width: 10;
+    transition: stroke-dashoffset 0.1s linear;
+  }
 
-img,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-}
+  .time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7rem;
+    font-weight: bold;
+    color: white;
+  }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  button {
+    padding: 0.2em 1rem;
+    margin: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #45a049;
+    }
+
+    &:active {
+      color: black;
+    }
+  }

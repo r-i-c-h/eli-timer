@@ -6,25 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eli's Timer</title>
   <link rel="stylesheet" type="text/css" href="styles/index.css" />
-  <script src="js/main.js" />
 </head>
 
 <body>
-  <h1>Timer</h1>
-  <div class="countdown-wrapper">
-    <h2>Timer Here</h2>
-    <div class="countdown-timer">
-    </div>
+  <h1>Eli's Countdown Timer</h1>
+
+  <div class="timer-container" id="timer-container">
+    <svg width="100%" height="100%" viewBox="0 0 200 200">
+      <circle class="background-circle" cx="100" cy="100" r="90"></circle>
+      <circle class="circle" cx="100" cy="100" r="90" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+    </svg>
+    <div class="time" id="time">00:05</div>
   </div>
-  <div class="controls">
-    <h3>Controls</h3>
-    <button>Start</button>
-    <button>Stop</button>
-    <button type="reset"></button>
-  </div>
-  <div class="visual-block">
-    <h3>Circle Here</h3>
-  </div>
+
+  <button id="actionButton">Start Countdown</button>
+  <button id="resetButton">Reset</button>
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>
